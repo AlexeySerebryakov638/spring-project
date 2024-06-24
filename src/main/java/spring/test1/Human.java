@@ -1,8 +1,13 @@
 package spring.test1;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Human {
+	@Autowired
 	Dog dog;
+	@Autowired
 	Cat cat;
+	@Autowired
 	Parrot parrot1, parrot2;
 	
 	public Dog getDog() {

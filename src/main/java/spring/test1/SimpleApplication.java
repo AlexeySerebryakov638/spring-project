@@ -3,22 +3,18 @@ package spring.test1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
-
-import spring.test1.Human;
+import org.springframework.context.annotation.Import;
 
 @Configuration
-@ImportResource("classpath:applicationContext.xml")
+@Import({AppConfig.class})
 public class SimpleApplication implements CommandLineRunner {
 
 	@Autowired
-	ApplicationContext context;
+	Human human;
 	
 	@Override
 	public void run(String... args) {
-		Human human = (Human) context.getBean("human");
 		human.shoutout();
 	}
 
