@@ -14,11 +14,10 @@ import spring.test1.Human;
 public class SimpleApplication implements CommandLineRunner {
 
 	@Autowired
-	ApplicationContext context;
+	Human human;
 	
 	@Override
 	public void run(String... args) {
-		Human human = (Human) context.getBean("human");
 		human.shoutout();
 	}
 
