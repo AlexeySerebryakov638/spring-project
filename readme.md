@@ -1,1 +1,2 @@
-DI с помощью XML-конфигурации
+XML-конфигурация\
+applicationConfig лежит в src/main/resources
